@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(70, 67, 67);
+}
+.container{
+  min-width: 400px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  position: relative;
+  background-color: #fff;
+  box-shadow:  10px 10px 15px 1px rgb(22, 22, 22);
+  color: rgb(1, 39, 26);
+
+}
+.title{
+  text-align: center;
+  padding-top: 5px;
+  color: aqua;
+  font-weight: normal;
+}
+.form{
+  padding: 1rem;
+  display: flex;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid aqua;
+  font-size: 1rem;
+  color: rgb(1, 39, 26);
+  font-weight: 500;
+  font-style: normal;
+}
+.search-icon{
+  position: absolute;
+  right: 5%;
+  top: 10%;
+}
+.search{
+  color: aqua;
+}
+.temp-img{
+  display: flex;
+  justify-content: center;
+}
+.temp-img img{
+  width: 130px;
+  height: 130px;
+  filter: drop-shadow(0 0 2px rgb(58, 56, 56) );
+}
+.weather-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 1rem;
+}
+.weather-details .location{
+  font-size: 1.4rem;
+}
+.weather-details span{
+  font-weight: 600;
+}
+.lat-lon{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 13px;
+}
+.lat,.lon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.other-detail{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.humidity,.wind-speed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.humidity, img{
+  width: 70px;
+  height: 70px;
+}
+.wind-speed img{
+  width: 70px;
+  height: 70px;
+}
+p{
+  font-size: 1.1rem;
+}
+span{
+  font-weight: bold;
+}
+.loader-container{
+  width: 390px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  top: 18%;
+  background-color: #ffffff;
+  backdrop-filter: blur(3px);
+
+}
+.loader-container img{
+  width: 80px;
+  height: 80px;
+}
+.loader img{
+  animation: loader 3s linear infinite;
+}
+.loader-container p{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: aqua;
+}
+@keyframes loader {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.notfound{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  backdrop-filter: blur(10px);
+  background-color: #fffdfd;
+  width: 390px;
+  height: 480px;
+}
+.notfound img{
+  width: 100px;
+  height: 100px;
+}
+.notfound p{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: aqua;
+}
+.nointernet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  backdrop-filter: blur(10px);
+  background-color: #fffdfd;
+  width: 390px;
+  height: 480px;
+}
+.nointernet img{
+  width: 100px;
+  height: 100px;
+}
+.nointernet p{
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: aqua;
+}
